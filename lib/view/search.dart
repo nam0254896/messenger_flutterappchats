@@ -34,7 +34,7 @@ class _searchScreeenState extends State<searchScreeen> {
             shrinkWrap: true,
             itemBuilder: (context, index) {
               return SearchTitle(
-                  userName: searchSnapshot.docs[index].get("name"),
+                  userName: searchSnapshot.docs[index].get("nam"),
                   userEmail: searchSnapshot.docs[index].get("email"));
             })
         : Container();
