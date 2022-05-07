@@ -30,13 +30,13 @@ class _searchScreeenState extends State<searchScreeen> {
   Widget searchList() {
     return searchSnapshot != null
         ? ListView.builder(
-        itemCount: searchSnapshot.docs.length,
-        shrinkWrap: true,
-        itemBuilder: (context, index) {
-          return SearchTitle(
-              userName: searchSnapshot.docs[index].data()["name"],
-              userEmail: searchSnapshot.docs[index].data()["email"]);
-        })
+            itemCount: searchSnapshot.docs.length,
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return SearchTitle(
+                  userName: searchSnapshot.docs[index].get("name"),
+                  userEmail: searchSnapshot.docs[index].get("email"));
+            })
         : Container();
   }
 
